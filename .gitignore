@@ -1,0 +1,131 @@
+# ===========================
+# Python
+# ===========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+
+# Distribution / Packaging
+build/
+dist/
+downloads/
+.eggs/
+*.egg-info/
+*.egg
+
+# ===========================
+# Virtual Environments
+# ===========================
+venv/
+.venv/
+env/
+ENV/
+
+# ===========================
+# Environment Variables
+# ===========================
+.env
+.env.*
+!.env.example
+
+# ===========================
+# IDEs
+# ===========================
+.vscode/
+.idea/
+
+# ===========================
+# OS Files
+# ===========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===========================
+# Python Cache
+# ===========================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# ===========================
+# Logs
+# ===========================
+logs/
+*.log
+
+# ===========================
+# Streamlit
+# ===========================
+.streamlit/secrets.toml
+
+# Optional: Ignore local Streamlit config
+.streamlit/config.toml
+
+# ===========================
+# Jupyter
+# ===========================
+.ipynb_checkpoints/
+
+# ===========================
+# Docker
+# ===========================
+*.tar
+
+# Docker Compose Override
+docker-compose.override.yml
+
+# ===========================
+# SQLite
+# ===========================
+*.sqlite3
+*.db
+*.db-journal
+
+# Ignore database folder if generated locally
+# database/*.db
+
+# ===========================
+# Temporary Files
+# ===========================
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# ===========================
+# Python Packaging
+# ===========================
+pip-wheel-metadata/
+
+# ===========================
+# Type Checker
+# ===========================
+.pyre/
+.pytype/
+
+# ===========================
+# VS Code Workspace
+# ===========================
+*.code-workspace
+
+# ===========================
+# Secrets
+# ===========================
+*.pem
+*.key
+*.crt
+*.pfx
+
+# ===========================
+# Misc
+# ===========================
+*.zip
+*.rar

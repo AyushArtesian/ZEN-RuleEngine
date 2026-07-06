@@ -1,0 +1,111 @@
+{
+  "contentType": "application/vnd.gorules.decision",
+  "nodes": [
+    {
+      "id": "node_input",
+      "name": "Invoice Input",
+      "type": "inputNode",
+      "position": {
+        "x": 100,
+        "y": 200
+      }
+    },
+    {
+      "id": "node_decision_table",
+      "name": "Invoice Rules",
+      "type": "decisionTableNode",
+      "position": {
+        "x": 450,
+        "y": 200
+      },
+      "content": {
+        "hitPolicy": "first",
+        "inputs": [
+          {
+            "id": "inp_34f6ff95",
+            "name": "Invoice Amount",
+            "field": "amount",
+            "defaultValue": ""
+          },
+          {
+            "id": "inp_4b62948f",
+            "name": "Validation Passed",
+            "field": "validationPassed",
+            "defaultValue": ""
+          },
+          {
+            "id": "inp_ce3e8683",
+            "name": "Vendor",
+            "field": "vendor",
+            "defaultValue": ""
+          }
+        ],
+        "outputs": [
+          {
+            "id": "out_de338c90",
+            "name": "Action",
+            "field": "action",
+            "defaultValue": "\"\""
+          },
+          {
+            "id": "out_acc887b7",
+            "name": "Matched Rule",
+            "field": "matchedRule",
+            "defaultValue": "\"\""
+          }
+        ],
+        "rules": [
+          {
+            "_id": "rule_1",
+            "inp_34f6ff95": "",
+            "inp_4b62948f": "false",
+            "inp_ce3e8683": "\"Vendor A\"",
+            "out_de338c90": "\"BYPASS_HUMAN_QUEUE\"",
+            "out_acc887b7": "\"Vendor A Bypass\""
+          },
+          {
+            "_id": "rule_2",
+            "inp_34f6ff95": "> 50000.0",
+            "inp_4b62948f": "",
+            "inp_ce3e8683": "",
+            "out_de338c90": "\"BLOCK_POSTING\"",
+            "out_acc887b7": "\"High Value Block\""
+          },
+          {
+            "_id": "rule_4",
+            "inp_34f6ff95": "",
+            "inp_4b62948f": "",
+            "inp_ce3e8683": "\"Vendor C\"",
+            "out_de338c90": "\"SEND_TO_HUMAN_QUEUE\"",
+            "out_acc887b7": "\"Send to Human Queue\""
+          }
+        ]
+      }
+    },
+    {
+      "id": "node_output",
+      "name": "Decision Output",
+      "type": "outputNode",
+      "position": {
+        "x": 800,
+        "y": 200
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_1",
+      "sourceId": "node_input",
+      "targetId": "node_decision_table",
+      "sourceHandle": null,
+      "targetHandle": null
+    },
+    {
+      "id": "edge_2",
+      "sourceId": "node_decision_table",
+      "targetId": "node_output",
+      "sourceHandle": null,
+      "targetHandle": null
+    }
+  ]
+}

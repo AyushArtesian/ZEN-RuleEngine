@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  invoice-rule-engine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: invoice-rule-engine
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./decision_models:/app/decision_models
+    environment:
+      - APP_NAME=Invoice Rule Engine
+      - LOG_LEVEL=INFO
+      - DEFAULT_ACTION=SEND_TO_HUMAN_QUEUE
+    restart: unless-stopped

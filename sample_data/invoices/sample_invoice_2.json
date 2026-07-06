@@ -1,0 +1,10 @@
+{
+  "invoiceId": "INV-002",
+  "vendor": "Vendor B",
+  "amount": 45000.00,
+  "currency": "EUR",
+  "country": "Germany",
+  "store": "Store-02",
+  "validationPassed": true,
+  "missingFields": []
+}
